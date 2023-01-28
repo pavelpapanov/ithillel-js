@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #3 - Числа та рядки</title>
+</head>
+<body>
+
+<script>
+	let userNumber;
+
+	while (true) {
+		userNumber = Number(prompt('Please, enter a five-digit number:'));
+
+		if (userNumber !== null && userNumber.trim() !== '' && userNumber.length >= 5 && userNumber.length < 6) {
+			alert(`${userNumber[0]} ${userNumber[1]} ${userNumber[2]} ${userNumber[3]} ${userNumber[4]}`);
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #2 - Hello user</title>
+</head>
+<body>
+
+<script>
+	let userName = prompt('What is your name?');
+
+	if (userName !== null && userName.trim() !== '' ) {
+		alert(`Hello, ${userName}! How are you?`);
+	} else {
+		alert('You did not enter your name!');
+	}
+
+
+	// endless question (безкінечне питання)
+	/*
+	let userName;
+
+	while (true) {
+		userName = prompt('What is your name?');
+
+		if (userName !== null && userName.trim() !== '') {
+			alert(`Hello, ${userName}! How are you?`);
+		}
+	}
+	 */
+</script>
+</body>
+</html>
