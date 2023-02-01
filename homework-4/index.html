@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #3 - Числа та рядки</title>
+</head>
+<body>
+
+<script>
+	const today = new Date();
+	const year = today.getFullYear();
+	const userYearBirth = prompt('Ваш рік народження?');
+	const userCity = prompt('В якому місті Ви живете?');
+	const userFavoriteSport = prompt('Ваш улюблений вид спорту?');
+	const userAge = year - Number(userYearBirth);
+	let userCountry;
+	let sportsChampions;
+
+	if (userYearBirth === null) {
+		alert('Шкода, що Ви не захотіли ввести свою дату народження (');
+	}
+
+	if (userCity === null) {
+		alert('Шкода, що Ви не захотіли ввести місто в якому живете (');
+	}
+
+	if (userFavoriteSport === null) {
+		alert('Шкода, що Ви не захотіли ввести свій улюблений вид спорту (');
+	}
+
+	switch (userCity) {
+		case 'Київ':
+			userCountry = 'Ти живеш у столиці України! Слава Україні!';
+			break;
+		case 'Вашингтон':
+			userCountry = 'Ти живеш у столиці США! In God we trust!';
+			break;
+		case 'Лондон':
+			userCountry = 'Ти живеш у столиці Англії та Великої Британії! God bless the Queen!';
+			break;
+		default:
+			sportsChampions = userCity;
+			break;
+	}
+
+	switch (userFavoriteSport) {
+		case 'Футбол':
+			sportsChampions = 'Мессі';
+			break;
+		case 'Формула1':
+			sportsChampions = 'Ферстаппен';
+			break;
+		case 'Баскетбол':
+			sportsChampions = 'Карри';
+			break;
+		default:
+			sportsChampions = userFavoriteSport;
+			break;
+	}
+
+	console.log(userAge);
+
+
+	// if (userCity === 'Київ') {
+	// 	alert(`Твій вік - ${userAge}. Ти живеш у столиці України! Слава Україні!`);
+	// } else if (userCity === 'Вашингтон') {
+	// 	alert(`Твій вік - ${userAge}. Ти живеш у столиці США! In God we trust!`);
+	// } else if (userCity === 'Лондон') {
+	// 	alert(`Твій вік - ${userAge}. Ти живеш у столиці Англії та Великої Британії! God bless the Queen!`);
+	// } else {
+	// 	alert(`Твій вік - ${userAge}. Ти живеш у місті ${userCity}!`);
+	// }
+</script>
+</body>
+</html>
