@@ -14,7 +14,7 @@
 	while (true) {
 		userNumber = Number(prompt('Please, enter a five-digit number:'));
 
-		if (userNumber !== null && userNumber.trim() !== '' && userNumber.length >= 5 && userNumber.length < 6) {
+		if (userNumber !== null && userNumber.trim() !== '' && userNumber.length === 5) {
 			alert(`${userNumber[0]} ${userNumber[1]} ${userNumber[2]} ${userNumber[3]} ${userNumber[4]}`);
 		}
 	}

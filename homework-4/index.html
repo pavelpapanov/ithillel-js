@@ -11,38 +11,41 @@
 <script>
 	const today = new Date();
 	const year = today.getFullYear();
-	const userYearBirth = prompt('Ваш рік народження?');
-	const userCity = prompt('В якому місті Ви живете?');
-	const userFavoriteSport = prompt('Ваш улюблений вид спорту?');
-	const userAge = year - Number(userYearBirth);
-	let userCountry;
-	let sportsChampions;
+	const userYearBirth = +prompt('Ваш рік народження?');
+	const userAge = year - userYearBirth;
 
-	if (userYearBirth === null) {
+	if (userYearBirth === 0 ) {
 		alert('Шкода, що Ви не захотіли ввести свою дату народження (');
+	}
+
+	const userCity = prompt('В якому місті Ви живете?');
+	let userCountry;
+
+	switch (userCity) {
+		case 'Київ':
+			userCountry = 'України! Слава Україні!';
+			break;
+		case 'Вашингтон':
+			userCountry = 'США! In God we trust!';
+			break;
+		case 'Лондон':
+			userCountry = 'Англії та Великої Британії! God bless the Queen!';
+			break;
+		default:
+			userCountry = userCity;
+			break;
 	}
 
 	if (userCity === null) {
 		alert('Шкода, що Ви не захотіли ввести місто в якому живете (');
 	}
 
+	const userFavoriteSport = prompt('Ваш улюблений вид спорту?');
+
+	let sportsChampions;
+
 	if (userFavoriteSport === null) {
 		alert('Шкода, що Ви не захотіли ввести свій улюблений вид спорту (');
-	}
-
-	switch (userCity) {
-		case 'Київ':
-			userCountry = 'Ти живеш у столиці України! Слава Україні!';
-			break;
-		case 'Вашингтон':
-			userCountry = 'Ти живеш у столиці США! In God we trust!';
-			break;
-		case 'Лондон':
-			userCountry = 'Ти живеш у столиці Англії та Великої Британії! God bless the Queen!';
-			break;
-		default:
-			sportsChampions = userCity;
-			break;
 	}
 
 	switch (userFavoriteSport) {
@@ -56,22 +59,16 @@
 			sportsChampions = 'Карри';
 			break;
 		default:
-			sportsChampions = userFavoriteSport;
+			sportsChampions = '';
 			break;
 	}
 
-	console.log(userAge);
+	if (userAge == year || userCountry === '' || sportsChampions === '') {
+		alert('Шкода, але Ви не до кінця заповнили дані!');
+	} else {
+		alert(`Вам ${userAge}. Ти живеш у столиці ${userCountry} Круто! Хочеш стати як ${sportsChampions}?`);
+	}
 
-
-	// if (userCity === 'Київ') {
-	// 	alert(`Твій вік - ${userAge}. Ти живеш у столиці України! Слава Україні!`);
-	// } else if (userCity === 'Вашингтон') {
-	// 	alert(`Твій вік - ${userAge}. Ти живеш у столиці США! In God we trust!`);
-	// } else if (userCity === 'Лондон') {
-	// 	alert(`Твій вік - ${userAge}. Ти живеш у столиці Англії та Великої Британії! God bless the Queen!`);
-	// } else {
-	// 	alert(`Твій вік - ${userAge}. Ти живеш у місті ${userCity}!`);
-	// }
 </script>
 </body>
 </html>
