@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #6 - Складніші цикли</title>
+</head>
+<body>
+
+<script>
+	// First cycle
+	// let firstCycle = '';
+	// let firstCycleNumber = 20;
+	// for(let i = firstCycleNumber; firstCycleNumber <= 30; i++) {
+	// 	firstCycle = firstCycle + firstCycleNumber + ' ';
+	// 	firstCycleNumber += 0.5;
+	// }
+	//
+	// console.log(firstCycle);
+
+	// Second cycle
+	// const dollarValue = 27;
+	//
+	// for (let i = 10; i <= 100; i++) {
+	// 	if (i % 10 === 0) {
+	// 		console.log('Вартість ' + i + ' доларів, дорівнює - ' + i*dollarValue + ' грн');
+	// 	}
+	// }
+
+	// Third cycle
+	// const integerNumber = 25;
+	// const limitNumber = 100;
+	//
+	// for (let i = 1; i <= limitNumber; i++) {
+	// 	if (i*i <= integerNumber) {
+	// 		console.log('Число ' + i + ' в квадраті, менше або дорівнює ' + integerNumber + '. Тобто ' + i*i + ' <= ' +
+	// 			integerNumber);
+	// 	}
+	// }
+
+	// Fourth cycle
+	const primeNumber = 20;
+
+	if (primeNumber === 1) {
+		console.log('Число не просте');
+	} else if (primeNumber === 2) {
+		console.log('Число просте');
+	} else {
+		for (let i = 2; i < primeNumber; i++) {
+			if (primeNumber % i === 0 ) {
+				console.log('Число не просте');
+			}
+		}
+
+		console.log('Число просте');
+	}
+
+</script>
+</body>
+</html>
