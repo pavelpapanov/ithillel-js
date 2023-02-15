@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #8 - Основи роботи з функціями</title>
+</head>
+<body>
+
+<script>
+	// first function
+	const customArray = [1, 2, 3, 4, 5, 6, 7];
+	const customItem = 5;
+
+	function removeElement(array, item) {
+		for (let key in array) {
+			if (array[key] === item) {
+				array.splice(key, 1);
+			}
+		}
+
+		return array;
+	}
+
+	console.log(removeElement(customArray, customItem));
+
+	// second function
+	const customArray2 = [29, 'tab', 3, 5, 7, 'foo', 3];
+
+	function calcArithmeticMean(array) {
+		let newArray = [];
+		let sum = 0;
+		let result;
+
+		for (let i of array) {
+			if (typeof i === 'string') {
+				continue;
+			}
+
+			newArray.push(i);
+		}
+
+		for (let i of newArray) {
+			sum +=i;
+		}
+
+		result = sum / newArray.length;
+
+		return result;
+	}
+
+	console.log(calcArithmeticMean(customArray2));
+
+	// third function
+	let customString = 'Hello World';
+	let customLetters = ['l', 'd'];
+
+	function removeLetters(str, letters) {
+		letters.forEach(item => {
+			let re = new RegExp(item, 'g');
+			str = str.replace(re, '');
+		});
+
+		return str;
+	}
+
+	console.log(removeLetters(customString, customLetters));
+</script>
+</body>
+</html>

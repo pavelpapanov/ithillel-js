@@ -10,23 +10,19 @@
 
 <script>
 	// First cycle
-	// let firstCycle = '';
-	// let firstCycleNumber = 20;
-	// for(let i = firstCycleNumber; firstCycleNumber <= 30; i++) {
-	// 	firstCycle = firstCycle + firstCycleNumber + ' ';
-	// 	firstCycleNumber += 0.5;
-	// }
-	//
-	// console.log(firstCycle);
+	let firstCycle = '';
+	for (let i = 20; i <= 30; i += 0.5) {
+		firstCycle = firstCycle + i + ' ';
+	}
+
+	console.log(firstCycle);
 
 	// Second cycle
-	// const dollarValue = 27;
-	//
-	// for (let i = 10; i <= 100; i++) {
-	// 	if (i % 10 === 0) {
-	// 		console.log('Вартість ' + i + ' доларів, дорівнює - ' + i*dollarValue + ' грн');
-	// 	}
-	// }
+	const dollarValue = 27;
+
+	for (let i = 10; i <= 100; i += 10) {
+		console.log('Вартість ' + i + ' доларів, дорівнює - ' + i * dollarValue + ' грн');
+	}
 
 	// Third cycle
 	// const integerNumber = 25;
@@ -40,43 +36,55 @@
 	// }
 
 	// Fourth cycle
-	// let consoleMessage = '';
-	// const primeNumber = 3;
-	//
-	// if (primeNumber === 1) {
-	// 	consoleMessage = 'Число не просте';
-	// } else if (primeNumber === 2) {
-	// 	consoleMessage = 'Число просте';
-	// } else {
-	// 	for (let i = 2; i < primeNumber; i++) {
-	// 		if (primeNumber % i === 0) {
-	// 			consoleMessage = 'Число не просте';
+	let consoleMessage = '';
+	const num = 4;
+
+	if (num > 1) {
+		for (let i = 2; i <= num; i++) {
+			if (num % i === 0) {
+				consoleMessage = 'Число не просте';
+			}
+		}
+
+		consoleMessage = 'Число просте';
+	} else {
+		consoleMessage = 'Число має бути більше 1';
+	}
+
+	console.log(consoleMessage);
+
+	// function getCheckPrimeNumber(num) {
+	// 	if (num > 1) {
+	// 		for (let i = 2; i < num; i++) {
+	// 			if (num % i === 0) {
+	// 				return 'Составное число';
+	// 			}
 	// 		}
-	// 	}
 	//
-	// 	if (consoleMessage === '') {
-	// 		consoleMessage = 'Число просте';
+	// 		return 'Простое число';
+	// 	} else  {
+	// 		return  'Число должно быть больше 1';
 	// 	}
 	// }
 	//
-	// console.log(consoleMessage);
+	// console.log(getCheckPrimeNumber(6));
 
 	// Fifth cycle
-	let randomNumber = 243;
-	let messageAboutRandomNumber = '';
-
-	for (let i = 1; i <= randomNumber; i+3) {
-		i *= 3;
-		if (i === randomNumber) {
-			messageAboutRandomNumber = `Число ${randomNumber} можна одержати шляхом зведення числа 3 у деякий ступінь.`;
-		}
-	}
-
-	if (messageAboutRandomNumber !== '') {
-		console.log(messageAboutRandomNumber);
-	} else {
-		console.log(`Число ${randomNumber} не можна одержати шляхом зведення числа 3 у деякий ступінь.`);
-	}
+	// let randomNumber = 243;
+	// let messageAboutRandomNumber = '';
+	//
+	// for (let i = 1; i <= randomNumber; i+3) {
+	// 	i *= 3;
+	// 	if (i === randomNumber) {
+	// 		messageAboutRandomNumber = `Число ${randomNumber} можна одержати шляхом зведення числа 3 у деякий ступінь.`;
+	// 	}
+	// }
+	//
+	// if (messageAboutRandomNumber !== '') {
+	// 	console.log(messageAboutRandomNumber);
+	// } else {
+	// 	console.log(`Число ${randomNumber} не можна одержати шляхом зведення числа 3 у деякий ступінь.`);
+	// }
 </script>
 </body>
 </html>
