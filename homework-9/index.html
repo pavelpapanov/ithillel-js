@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #9 - Функція із замиканням</title>
+</head>
+<body>
+
+<script>
+	function addition() {
+		let num = 0;
+
+		return function (x) {
+			num += x;
+			return num;
+		}
+	}
+
+	let sum = addition();
+
+	console.log(sum(3));
+	console.log(sum(5));
+	console.log(sum(20));
+</script>
+</body>
+</html>
