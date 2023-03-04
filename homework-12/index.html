@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #12 - Виведення зображень</title>
+</head>
+<body>
+
+<div id="image"></div>
+
+<script>
+	let imageDiv = document.getElementById('image');
+	let image = document.createElement('img');
+	let randomNumber = function(min, max) {
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+	image.src = 'images/' + randomNumber(1, 9) + '.jpg';
+
+	imageDiv.append(image);
+</script>
+</body>
+</html>
