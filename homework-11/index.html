@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #11 - Рекурсивне зведення в ступінь</title>
+</head>
+<body>
+
+<script>
+	function pow(num, degree) {
+		if (degree === 1) {
+			return num;
+		} else {
+			return num * pow(num, degree - 1);
+		}
+	}
+
+	console.log(pow(4, 3));
+</script>
+</body>
+</html>
