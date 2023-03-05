@@ -8,7 +8,25 @@
 </head>
 <body>
 
+<button>Google.com</button>
+<button>http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference</button>
+<button>https://uk.javascript.info</button>
+
 <script>
+	let buttons = document.querySelectorAll('button');
+
+	buttons.forEach(function (button) {
+		let buttonText = button.innerText.toLowerCase();
+		let protocolCheck = buttonText.startsWith('http://') || buttonText.startsWith('https://') ? 1 : 0;
+
+		if (!protocolCheck) {
+			buttonText = 'https://' + buttonText;
+		}
+
+		button.addEventListener('click', function () {
+			window.open(buttonText, '_blank');
+		});
+	});
 </script>
 </body>
 </html>
