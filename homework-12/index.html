@@ -8,17 +8,21 @@
 </head>
 <body>
 
+<button class="js-change-image">Change image</button>
 <div id="image"></div>
 
 <script>
 	let imageDiv = document.getElementById('image');
+	let changeImageButton = document.querySelector('.js-change-image');
 	let image = document.createElement('img');
 	let randomNumber = function(min, max) {
 		return Math.floor(Math.random() * (max - min + 1) + min);
 	}
-	image.src = 'images/' + randomNumber(1, 9) + '.jpg';
 
-	imageDiv.append(image);
+	changeImageButton.addEventListener('click', function() {
+		image.src = 'images/' + randomNumber(1, 9) + '.jpg';
+		imageDiv.append(image);
+	});
 </script>
 </body>
 </html>
