@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	line-height: 1.2;
+	font-size: 18px;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 75%;
+}
+
+.slider__item {
+	display: none;
+}
+
+.slider__item.show {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
