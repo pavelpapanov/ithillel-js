@@ -1,15 +1,16 @@
 $(document).ready(function() {
 	let $_galItem = $('.js--gal_item');
 	let $_modal = $('.js--modal');
+	let $_modalImage = $('.js--modal__content img');
+	let $_modalClose = $('.js--modal__close');
 
 	$_galItem.on('click', function() {
 		$_modal.addClass('active');
 		let $_imageUrl = $(this).find('img').attr('src');
-		$('.js--modal__content img').attr('src', $_imageUrl);
-		console.log($_imageUrl);
+		$_modalImage.attr('src', $_imageUrl);
 	});
 
-	$('.js--modal__close').on('click', function () {
+	$_modalClose.on('click', function () {
 		if ($_modal.has('active')) {
 			$_modal.removeClass('active');
 		}
