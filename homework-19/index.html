@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #19 - RegEx</title>
+	<style>
+		.verification-list {
+			color: tomato;
+		}
+
+		.verification-list li.verificate {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+
+<input type="text" class="input js--input">
+
+<ul class="verification-list js--verification-list">
+	<li class="js--capital-letter">Одна велика буква</li>
+	<li class="js--number">Одна цифра</li>
+	<li class="js--punctuation-mark">Один знак пунктуації</li>
+	<li class="js--minimum-symbols">Мінімум 8 символів</li>
+</ul>
+
+<script>
+	const _input = document.querySelector('.js--input');
+
+	function validateInput(pass) {
+		const regCapitalLetter = new RegExp("^(?=.*[A-Z])");
+		const regNumber = new RegExp("(?=.*[0-9])");
+		const regPunctuationMark = new RegExp("(?=.*[\.\,!@#\$%\^&\*])");
+		const regMinimumSymbols = new RegExp("(?=.{8,})");
+
+		if (pass === "") {
+			alert('Введіть пароль!');
+		}
+
+		if (regCapitalLetter.test(pass) === true) {
+			document.querySelector('.js--capital-letter').classList.add('verificate');
+		} else {
+			document.querySelector('.js--capital-letter').classList.remove('verificate');
+		}
+
+		if (regNumber.test(pass) === true) {
+			document.querySelector('.js--number').classList.add('verificate');
+		} else {
+			document.querySelector('.js--number').classList.remove('verificate');
+		}
+
+		if (regPunctuationMark.test(pass) === true) {
+			document.querySelector('.js--punctuation-mark').classList.add('verificate');
+		} else {
+			document.querySelector('.js--punctuation-mark').classList.remove('verificate');
+		}
+
+		if (regMinimumSymbols.test(pass) === true) {
+			document.querySelector('.js--minimum-symbols').classList.add('verificate');
+		} else {
+			document.querySelector('.js--minimum-symbols').classList.remove('verificate');
+		}
+	}
+
+	_input.addEventListener('input', function () {
+		console.log(validateInput(_input.value));
+	});
+</script>
+</body>
+</html>
