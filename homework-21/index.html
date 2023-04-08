@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="uk" class="page">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework #21 - Ajax Weather</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page__body">
+<main class="page__main">
+	<div class="container">
+		<h1 class="page__title">Давайте дізнаємось погоду в місті!</h1>
+		<form class="form js--form">
+			<small class="form__hint">(введіть місто на українській/англійській мові)</small>
+			<label for="city" class="form__label">Вкажіть місто</label>
+			<input type="text" name="city" id="city" required class="form__input js--input-city">
+			<button class="form__button">Отримати погоду</button>
+		</form>
+		<div class="table-block js--weather"></div>
+	</div>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
