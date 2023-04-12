@@ -30,7 +30,8 @@ class Student {
 		const maxLength = this.maxLength;
 
 		if (attendance.length < maxLength) {
-			return attendance.push(true);
+			attendance.push(true);
+			return this;
 		} else {
 			console.log(`Не може бути більше ${this.maxLength} відвідувань`);
 		}
@@ -41,7 +42,8 @@ class Student {
 		const maxLength = this.maxLength;
 
 		if (attendance.length < maxLength) {
-			return attendance.push(false);
+			attendance.push(false);
+			return this;
 		} else {
 			console.log(`Не може бути більше ${this.maxLength} відвідувань`);
 		}
@@ -66,7 +68,7 @@ class Student {
 	};
 
 	summary() {
-		const progress =  this.getAverageSum(this.progress);
+		const progress = this.getAverageSum(this.progress);
 		const attendance = this.getAverageAttendance(this.attendance);
 
 		if (progress > 90 && attendance > 0.9) {
@@ -86,31 +88,9 @@ const Pavlo = new Student({
 	progress: [100, 90, 85, 60, 30, 10]
 });
 
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.absent();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.absent();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.absent();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.absent();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.present();
-Pavlo.absent();
+Pavlo.present().present().present().present().absent().present().present().present().present().absent().present()
+.present().present().present().absent().present().present().present().present().absent().present().present().present()
+.present().absent();
 
 generateItem(Pavlo.summary());
 
@@ -121,31 +101,9 @@ const Nikita = new Student({
 	progress: [100, 90, 85, 90, 100, 90]
 });
 
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.absent();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.absent();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.absent();
-Nikita.present();
-Nikita.present();
-Nikita.absent();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.present();
-Nikita.absent();
+Nikita.present().present().present().present().absent().present().present().present().present().absent().present()
+.present().present().absent().present().present().absent().present().present().present().present().present().present()
+.present().absent();
 
 generateItem(Nikita.summary());
 
@@ -156,30 +114,8 @@ const Oleksandra = new Student({
 	progress: [100, 100, 100, 100, 100, 100]
 });
 
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
-Oleksandra.present();
+Oleksandra.present().present().present().present().present().present().present().present().present().present().present()
+.present().present().present().present().present().present().present().present().present().present().present().present()
+.present().present();
 
 generateItem(Oleksandra.summary());
