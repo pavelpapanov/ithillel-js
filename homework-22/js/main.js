@@ -35,9 +35,16 @@ function getArticle(id) {
 		method: "GET"
 	});
 
-	promise.then(res => res.json().then(data => {
+	promise.then(res => {
+		if (res.ok) {
+			return res.json();
+		}
+		throw new Error('Запит не був успішним');
+	}).then(data => {
 		block.innerHTML = `<p>${data.body}</p>`;
-	}));
+	}).catch(error => {
+		alert('Щось пішло не так');
+	});
 }
 
 function getArticleComments(id) {
@@ -48,8 +55,15 @@ function getArticleComments(id) {
 		method: "GET"
 	});
 
-	promise.then(res => res.json().then(data => {
+	promise.then(res => {
+		if (res.ok) {
+			return res.json();
+		}
+		throw new Error('Запит не був успішним');
+	}).then(data => {
 		result = data;
 		commentsBlock.innerHTML = `<ul>` + result.map((item) => `<li>${item.body}</li>`).join('') + `</ul>`;
-	}));
+	}).catch(error => {
+		alert('Щось пішло не так');
+	});
 }
