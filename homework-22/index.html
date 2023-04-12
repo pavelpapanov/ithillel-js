@@ -1,16 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk" class="page">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Homework #22 - Promise</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<form class="form js--form">
-	<label class="form__label" for="postId"></label>
-	<input type="number" name="postId" id="postId" class="form__input">
-</form>
+<body class="page__body">
+<main class="page__main">
+	<div class="container">
+		<h1 class="page__title">Пошук поста за ID</h1>
+		<form class="form js--form">
+			<label class="form__label" for="postId">Введіть ID поста</label>
+			<input type="number" name="postId" id="postId" class="form__input js--post-id" min="1" max="100">
+			<button class="button form__button">Зробити запит</button>
+		</form>
+		<div class="article js--article"></div>
+		<button class="button comments-button js--comments">Коментарі</button>
+		<div class="comments js--article-comments"></div>
+	</div>
+</main>
 <script src="js/main.js"></script>
 </body>
 </html>
