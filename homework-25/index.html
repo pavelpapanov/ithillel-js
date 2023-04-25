@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uk" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework #25 - SWAPI</title>
+</head>
+<body class="page__body">
+<main class="page__main">
+  <div class="container">
+    <h1 class="page__title">SWAPI</h1>
+    <form action="https://swapi.dev/api/" class="form js--form">
+      <div class="form__group">
+        <span>https://swapi.dev/api/</span>
+        <label for="interactive" class="form__label"></label>
+        <input type="text" name="interactive" id="interactive" class="form__input js--form-input" placeholder="people/1">
+        <button type="submit" class="form__btn">Get info</button>
+      </div>
+    </form>
+    <div class="result">
+      <span class="badge js--controller"></span>
+      <span class="badge js--id"></span>
+      <div class="loader js--loader"></div>
+      <pre class="formatting js--pre"></pre>
+    </div>
+  </div>
+</main>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
