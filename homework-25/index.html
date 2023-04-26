@@ -5,28 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Homework #25 - SWAPI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <style>
+    .card {
+      position: relative;
+    }
+
+    .loader {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(50% - 18px);
+      text-align: center;
+    }
+  </style>
 </head>
 <body class="page__body">
 <main class="page__main">
   <div class="container">
     <h1 class="page__title">SWAPI</h1>
-    <form action="https://swapi.dev/api/" class="form js--form">
-      <div class="form__group">
-        <span>https://swapi.dev/api/</span>
-        <label for="interactive" class="form__label"></label>
-        <input type="text" name="interactive" id="interactive" class="form__input js--form-input" placeholder="people/1">
-        <button type="submit" class="form__btn">Get info</button>
-      </div>
+    <form action="https://swapi.dev/api" class="input-group mb-3 form js--form">
+      <span class="input-group-text">https://swapi.dev/api/</span>
+      <label for="url" class="form__label visually-hidden">Поле вводу</label>
+      <input type="text" name="url" id="url" class="form-control form__input js--form-input"
+             placeholder="people/1">
+      <button type="submit" class="btn btn-outline-secondary form__btn">Get info</button>
     </form>
-    <div class="result">
-      <span class="badge js--controller"></span>
-      <span class="badge js--id"></span>
-      <div class="loader js--loader"></div>
-      <pre class="formatting js--pre"></pre>
+    <div class="card">
+      <div class="card-body">
+        <span class="badge d-none bg-secondary js--controller">people</span>
+        <span class="badge d-none bg-secondary js--id">1</span>
+        <div class="load d-none js--loader">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <pre class="mt-2 mb-0 js--pre"></pre>
+      </div>
     </div>
   </div>
 </main>
 
-<script type="module" src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
