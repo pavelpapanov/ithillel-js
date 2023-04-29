@@ -98,6 +98,10 @@ formInputRepeatPass.initInput(form, 'form__input', 'Repeat your password');
 formCheckbox.initCheckbox(form, 'form__checkbox', false, 'I agree all statements', 'https://nodesource.com/legal/product-tos');
 formButton.initButton(form, 'submit', 'button js--button');
 
+let inputName = document.querySelector('.js--name');
+
 form.addEventListener('submit', function (e) {
   e.preventDefault();
+
+  console.log(inputName.value);
 });
