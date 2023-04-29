@@ -19,13 +19,13 @@ class TextElement extends FormElement {
     const _input = document.createElement('input');
     _input.setAttribute('name', this.name);
     _input.setAttribute('type', this.type);
-    // _input.setAttribute('value', this.getValue());
+    _input.setAttribute('value', this.value);
     return _input;
   }
 
   initInput(form, inputClass, placeholder) {
     let _input = this.createInput(form);
-    _input.classList.add(inputClass);
+    _input.setAttribute('class', inputClass);
     _input.setAttribute('placeholder', placeholder);
     form.appendChild(_input);
   }
@@ -44,7 +44,7 @@ class CheckboxElement extends FormElement {
     let _inputGroup = document.createElement('div');
     let _input = this.createCheckbox(form);
     let _label = document.createElement('label');
-    _input.classList.add(inputClass);
+    _input.setAttribute('class', inputClass);
     _label.setAttribute('for', this.name);
     _label.textContent = labelText;
     _inputGroup.appendChild(_input);
@@ -91,7 +91,7 @@ const formInputRepeatPass = new TextElement('password', 'password', '');
 const formCheckbox = new CheckboxElement('checkbox', 'checkbox', '');
 const formButton = new ButtonElement('button', 'button', '');
 
-formInputName.initInput(form, 'form__input', 'Your Name');
+formInputName.initInput(form, 'form__input js--name', 'Your Name');
 formInputEmail.initInput(form, 'form__input', 'Your Email');
 formInputPass.initInput(form, 'form__input', 'Password');
 formInputRepeatPass.initInput(form, 'form__input', 'Repeat your password');
