@@ -118,6 +118,10 @@ body {
   border-radius: 4px;
 }
 
+.form__group {
+  margin-bottom: 1rem;
+}
+
 .form__hint {
   margin-bottom: 16px;
   text-align: center;

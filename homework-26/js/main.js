@@ -20,6 +20,7 @@ class TextElement extends FormElement {
     _input.setAttribute('name', this.name);
     _input.setAttribute('type', this.type);
     _input.setAttribute('value', this.value);
+    _input.addEventListener('input', (e) => this.value = e.target.value);
     return _input;
   }
 
@@ -37,6 +38,14 @@ class CheckboxElement extends FormElement {
     _input.setAttribute('name', this.name);
     _input.setAttribute('type', this.type);
     _input.setAttribute('id', this.name);
+    _input.addEventListener('change', () => {
+      if (_input.checked) {
+        this.value = 'true';
+      } else {
+        this.value = 'false';
+      }
+    });
+
     return _input;
   }
 
@@ -47,11 +56,15 @@ class CheckboxElement extends FormElement {
     _input.setAttribute('class', inputClass);
     _label.setAttribute('for', this.name);
     _label.textContent = labelText;
+    _inputGroup.classList.add('form__group');
     _inputGroup.appendChild(_input);
     _inputGroup.appendChild(_label);
 
     if (status === true) {
       _input.setAttribute('checked', status);
+      this.value = 'true';
+    } else {
+      this.value = 'false';
     }
 
     if (link) {
@@ -98,10 +111,12 @@ formInputRepeatPass.initInput(form, 'form__input', 'Repeat your password');
 formCheckbox.initCheckbox(form, 'form__checkbox', false, 'I agree all statements', 'https://nodesource.com/legal/product-tos');
 formButton.initButton(form, 'submit', 'button js--button');
 
-let inputName = document.querySelector('.js--name');
-
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  console.log(inputName.value);
+  console.log(`${formInputName.name} : ${formInputName.getValue()}`);
+  console.log(`${formInputEmail.name} : ${formInputEmail.getValue()}`);
+  console.log(`${formInputPass.name} : ${formInputPass.getValue()}`);
+  console.log(`${formInputRepeatPass.name} : ${formInputRepeatPass.getValue()}`);
+  console.log(`${formCheckbox.name} : ${formCheckbox.getValue()}`);
 });
