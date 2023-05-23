@@ -1,9 +1,10 @@
 import React from "react";
 
-export default class Header extends React.Component {
-  render() {
-    return (
-        <h1 className="page__title">Todo List with localStorage</h1>
-    )
-  }
+function Header(props) {
+  const { text } = props;
+  return (
+      <h1 className="page__title">{text}</h1>
+  )
 }
+
+export default Header;

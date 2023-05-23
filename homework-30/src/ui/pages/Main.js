@@ -59,7 +59,7 @@ function Main() {
 
   return (
       <Wrapper>
-        <Header/>
+        <Header text="Todo List with localStorage" />
         <TodoForm addItem={addItem}/>
         <div>
           {items.map(item => (
