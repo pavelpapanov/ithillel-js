@@ -21,7 +21,7 @@ export default class TodoItem extends React.Component {
               onClick={updateItem}
           />
           <Button
-              text="Удалить"
+              text="Видалити"
               customClass="todo-item__delete"
               onClick={onClick}
           />

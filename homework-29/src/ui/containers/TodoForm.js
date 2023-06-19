@@ -7,8 +7,13 @@ export default class TodoForm extends React.Component {
     const { addItem } = this.props;
     return (
         <form className="form" onSubmit={addItem}>
-          <Input />
-          <Button text="Відправити" customClass="form__btn" />
+          <Input
+              type="text"
+              name="value"
+              required="true"
+              customClass="form__input"
+          />
+          <Button text="Відправити" customClass="form__btn"/>
         </form>
     )
   }

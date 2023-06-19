@@ -5,7 +5,7 @@ import TodoForm from "../containers/TodoForm";
 import TodoItem from "../components/TodoItem";
 
 function Main() {
-  const [items, setItems] = useState([]);
+  const [items, setItems, setValue] = useState([]);
 
   useEffect(() => {
     setItems(JSON.parse(localStorage.getItem('items')) || []
