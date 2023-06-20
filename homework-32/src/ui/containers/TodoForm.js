@@ -6,9 +6,12 @@ import Button from "../components/form/Button";
 function TodoForm(props) {
   const { addItem } = props;
   const todoInputText = useTodoField('type');
+  const onSubmit = (event) => {
+    addItem(event, todoInputText);
+  }
 
   return (
-      <form className="form" onSubmit={addItem}>
+      <form className="form" onSubmit={onSubmit}>
         <Input
             value={todoInputText.value}
             onChange={todoInputText.onChange}

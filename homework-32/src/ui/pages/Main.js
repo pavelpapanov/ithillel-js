@@ -12,9 +12,9 @@ function Main() {
     )
   }, []);
 
-  const addItem = (event) => {
+  const addItem = (event, input) => {
     event.preventDefault();
-    const input = event.target.getElementsByClassName('form__input')[0];
+    // const input = event.target.getElementsByClassName('form__input')[0];
     const inputValue = input.value;
     const checked = false;
     const newItems = [
@@ -23,7 +23,12 @@ function Main() {
     ];
     setItems(newItems);
     localStorage.setItem('items', JSON.stringify(newItems));
-    input.value = '';
+    // input.value = '';
+    input.onChange({
+      target: {
+        value: ''
+      }
+    })
   }
 
   const removeItem = (id) => {
@@ -59,7 +64,7 @@ function Main() {
 
   return (
       <Wrapper>
-        <Header text="Todo List with Controlled Inputs" />
+        <Header text="Todo List with Controlled Inputs"/>
         <TodoForm addItem={addItem}/>
         <div>
           {items.map(item => (
