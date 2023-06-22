@@ -1,4 +1,4 @@
-#  TODO: Controlled Input
+#  TODO: Controlled Index
 
 Зробити в TODO роботу через контрольований компонент.
 

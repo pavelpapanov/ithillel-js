@@ -1,0 +1,14 @@
+.input {
+  min-height: 25px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid;
+}
+
+.input__error {
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  color: black;
+  border-radius: 4px;
+}

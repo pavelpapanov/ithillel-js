@@ -14,7 +14,6 @@ function Main() {
 
   const addItem = (event, input) => {
     event.preventDefault();
-    // const input = event.target.getElementsByClassName('form__input')[0];
     const inputValue = input.value;
     const checked = false;
     const newItems = [

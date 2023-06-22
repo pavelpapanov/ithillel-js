@@ -12,10 +12,8 @@ function Main() {
     )
   }, []);
 
-  const addItem = (event) => {
-    event.preventDefault();
-    const input = event.target.getElementsByClassName('form__input')[0];
-    const inputValue = input.value;
+  const addItem = (input) => {
+    const inputValue = input.todoitem;
     const checked = false;
     const newItems = [
       ...items,
